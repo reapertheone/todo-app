@@ -1,0 +1,14 @@
+<form (submit)="(editMode?edit(id):addTodo())">
+    <input type="text" name="inputTodo" placeholder="Enter todo..." class="input" [(ngModel)]="inputTodo">
+    <input type="submit" value="{{(editMode?'Save':'Add')}}">
+</form>
+
+<div class="todos">
+    
+    <div class="todo {{(todo.done?'done':'')}}" *ngFor="let todo of todos; let i=index;">
+        <div class="id">{{i+1}}</div>
+        <div class="content" (click)="toggleDone(i)">{{todo.content}}</div>
+        <button class="delete" (click)="remove(i)">Delete</button>
+        <button class="edit" (click)="editModeOn(i)">Edit</button>
+    </div>
+</div>
