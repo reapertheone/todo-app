@@ -5,6 +5,7 @@ Download the project
 
 <code>
   npm i -g @angular/cli
-  npm install
-  ng serve --open
-</code>
+ </code>
+  <code>npm install</code>
+ <code> ng serve --open</code>
+
